@@ -101,6 +101,7 @@ GEM
     thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    weighted_randomizer (0.1.2)
 
 PLATFORMS
   ruby
@@ -111,6 +112,7 @@ DEPENDENCIES
   puma
   rails (= 4.2.7)
   rails-api
+  weighted_randomizer
 
 BUNDLED WITH
    1.10.6

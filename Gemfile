@@ -7,3 +7,4 @@ gem 'puma'
 gem 'figaro'
 
 gem 'maxminddb'
+gem 'weighted_randomizer'

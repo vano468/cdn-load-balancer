@@ -17,7 +17,8 @@ class Balancer::ServersInfo
 
   def fetch_single_server(url)
     wrap_thread_timeout do
-      uri = URI("http://#{url}:8082/manage/server_status?salt=501120&hash=MK4eLWVhz/3bTQbrD5bCdg==")
+      params = "salt=#{Figaro.env.nimble_streamer_salt}&hash=#{Figaro.env.nimble_streamer_hash}"
+      uri = URI("http://#{url}:8082/manage/server_status?#{params}")
       res = Net::HTTP.get_response(uri)
       @info[url] = JSON.parse(res.body) if res.is_a?(Net::HTTPSuccess)
     end
