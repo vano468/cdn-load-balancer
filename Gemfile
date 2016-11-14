@@ -10,6 +10,7 @@ gem 'maxminddb'
 gem 'weighted_randomizer'
 
 group :development, :test do
+  gem 'pry-byebug'
   gem 'rspec-rails'
 end
 
