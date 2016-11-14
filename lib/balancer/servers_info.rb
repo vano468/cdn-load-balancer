@@ -38,6 +38,7 @@ class Balancer::ServersInfo
   end
 
   def wrap_cache(key)
-    Rails.cache.fetch(key, expires_in: CACHING_PERIOD) { yield }
+    Rails.env.test? ?
+      yield : Rails.cache.fetch(key, expires_in: CACHING_PERIOD) { yield }
   end
 end
