@@ -23,6 +23,7 @@ class Balancer
   def resolve_host
     reject_by_country(current_country) if current_country
     reject_by_overload
+    select_by_ip_country || select_by_priority_group
   end
 
   private
@@ -34,7 +35,7 @@ class Balancer
   def reject_by_overload
     servers_info = ServersInfo.new(urls: @servers.keys).fetch
     @servers.reject! do |url, data|
-      servers_info[url] &&
+      !servers_info[url] ||
         server_overload?(data[:channel], servers_info[url])
     end
   end
@@ -43,5 +44,30 @@ class Balancer
     load_in_mbps = server_info['OutRate'] / 1000 / 1000
     required_free = channel / 1000 * 100
     channel - required_free <= load_in_mbps
+  end
+
+  def select_by_ip_country
+    max_mind = MaxMindDB.new("#{Rails.root.to_s}/db/GeoLite2-Country.mmdb").lookup(@ip)
+    country = max_mind.country.iso_code # keep in mind that it may sometimes return "--"
+    result = @servers.find { |_, data| (data[:countries] || []).include?(country) }
+    result && result.first
+  end
+
+  def select_by_priority_group
+    priority = highest_priority_group
+    return nil if priority == 0
+
+    randomizer_data = @servers.select do |_, data|
+      data[:ranking][:priority] == priority
+    end.each_with_object({}) do |(url, data), memo|
+      memo[url] = data[:ranking][:weight]
+    end
+    WeightedRandomizer.new(randomizer_data).sample
+  end
+
+  def highest_priority_group
+    @servers.inject(0) do |max, (_, data)|
+      data[:ranking][:priority] > max ? data[:ranking][:priority] : max
+    end
   end
 end
