@@ -12,24 +12,24 @@ class Balancer
       'static-fr.ororo.tv'   => { channel: 1000, countries: %w(FR), ranking: { priority: 2, weight: 4 } } }
   end
 
-  attr_reader :ip, :current_country
+  attr_reader :ip, :current_server
 
-  def initialize(ip:, current_country: nil)
+  def initialize(ip:, current_server: nil)
     @ip = ip
-    @current_country = current_country.upcase if current_country
+    @current_server = current_server
     @servers = self.class.servers
   end
 
   def resolve_host
-    reject_by_country(current_country) if current_country
+    reject_by_server(current_server) if current_server
     reject_by_overload
     select_by_ip_country || select_by_priority_group
   end
 
   private
 
-  def reject_by_country(country)
-    @servers.reject! { |_, data| (data[:countries] || []).include?(country) }
+  def reject_by_server(server)
+    @servers.reject! { |url, _| server == url }
   end
 
   def reject_by_overload

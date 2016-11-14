@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 describe Balancer do
-  let(:country) { nil }
-  let(:instance) { Balancer.new(ip: ip, current_country: country) }
+  let(:current_server) { nil }
+  let(:instance) { Balancer.new(ip: ip, current_server: current_server) }
 
   let(:ip) { '127.0.0.1' }
   let(:russia_ip) { '37.145.150.150' }
@@ -30,7 +30,7 @@ describe Balancer do
       vcr: { cassette: 'resolve_host/ru_ru_none' } do
 
       let(:ip) { russia_ip }
-      let(:country) { 'RU' }
+      let(:current_server) { russian_servers.first }
 
       it { expect(european_servers).to include(subject) }
     end
@@ -49,7 +49,7 @@ describe Balancer do
       vcr: { cassette: 'resolve_host/ru_ru_eu' } do
 
       let(:ip) { russia_ip }
-      let(:country) { 'RU' }
+      let(:current_server) { russian_servers.first }
 
       it { expect(american_servers + ukrainian_servers).to include(subject) }
     end
