@@ -16,7 +16,7 @@ class Balancer
 
   def initialize(ip:, current_country: nil)
     @ip = ip
-    @current_country = current_country
+    @current_country = current_country.upcase if current_country
     @servers = self.class.servers
   end
 

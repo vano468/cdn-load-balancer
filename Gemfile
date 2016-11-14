@@ -8,3 +8,12 @@ gem 'figaro'
 
 gem 'maxminddb'
 gem 'weighted_randomizer'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'vcr'
+  gem 'webmock'
+end
