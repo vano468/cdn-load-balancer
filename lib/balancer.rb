@@ -28,10 +28,20 @@ class Balancer
   private
 
   def reject_by_country(country)
-    @servers.reject! { |_, v| (v[:countries] || []).include?(country) }
+    @servers.reject! { |_, data| (data[:countries] || []).include?(country) }
   end
 
   def reject_by_overload
-    
+    servers_info = ServersInfo.new(urls: @servers.keys).fetch
+    @servers.reject! do |url, data|
+      servers_info[url] &&
+        server_overload?(data[:channel], servers_info[url])
+    end
+  end
+
+  def server_overload?(channel, server_info)
+    load_in_mbps = server_info['OutRate'] / 1000 / 1000
+    required_free = channel / 1000 * 100
+    channel - required_free <= load_in_mbps
   end
 end
