@@ -23,7 +23,9 @@ class Balancer
   def resolve_host
     reject_by_server(current_server) if current_server
     reject_by_overload
-    select_by_ip_country || select_by_priority_group
+    select_by_ip_country
+    select_by_priority_group
+    @servers.empty? ? nil : randomized_by_weight
   end
 
   private
@@ -49,25 +51,24 @@ class Balancer
   def select_by_ip_country
     max_mind = MaxMindDB.new("#{Rails.root.to_s}/db/GeoLite2-Country.mmdb").lookup(@ip)
     country = max_mind.country.iso_code # keep in mind that it may sometimes return "--"
-    result = @servers.find { |_, data| (data[:countries] || []).include?(country) }
-    result && result.first
+    selected = @servers.select { |_, data| (data[:countries] || []).include?(country) }
+    @servers = selected unless selected.empty?
   end
 
   def select_by_priority_group
     priority = highest_priority_group
-    return nil if priority == 0
-
-    randomizer_data = @servers.select do |_, data|
-      data[:ranking][:priority] == priority
-    end.each_with_object({}) do |(url, data), memo|
-      memo[url] = data[:ranking][:weight]
-    end
-    WeightedRandomizer.new(randomizer_data).sample
+    @servers.select! { |_, data| data[:ranking][:priority] == priority }
   end
 
   def highest_priority_group
     @servers.inject(0) do |max, (_, data)|
       data[:ranking][:priority] > max ? data[:ranking][:priority] : max
     end
+  end
+
+  def randomized_by_weight
+    WeightedRandomizer.new(@servers.each_with_object({}) do |(url, data), memo|
+      memo[url] = data[:ranking][:weight]
+    end).sample
   end
 end
