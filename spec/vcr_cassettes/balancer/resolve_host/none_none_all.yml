@@ -2,191 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://static-rbx.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-      Host:
-      - static-rbx.ororo.tv:8082
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Mon, 14 Nov 2016 13:20:00 GMT
-      Server:
-      - Nimble/3.0.7-10
-      Content-Length:
-      - '132'
-      Cache-Control:
-      - no-cache
-      Content-Type:
-      - application/json
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"Connections": 444, "OutRate": 2900000000, "SysInfo": {"ap":12,"scl":0.073,"tpms":50614116352,"fpms":42170380288,"tsss":0,"fsss":0}}'
-    http_version: 
-  recorded_at: Mon, 14 Nov 2016 13:20:00 GMT
-- request:
-    method: get
-    uri: http://static-de.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-      Host:
-      - static-de.ororo.tv:8082
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Mon, 14 Nov 2016 13:20:00 GMT
-      Server:
-      - Nimble/3.0.7-10
-      Content-Length:
-      - '146'
-      Cache-Control:
-      - no-cache
-      Content-Type:
-      - application/json
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"Connections": 45, "OutRate": 2900000000, "SysInfo": {"ap":4,"scl":0.54,"tpms":16828022784,"fpms":14685007872,"tsss":4094685184,"fsss":3909451776}}'
-    http_version: 
-  recorded_at: Mon, 14 Nov 2016 13:20:00 GMT
-- request:
-    method: get
-    uri: http://static-uk.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-      Host:
-      - static-uk.ororo.tv:8082
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Mon, 14 Nov 2016 13:20:00 GMT
-      Server:
-      - Nimble/3.0.7-10
-      Content-Length:
-      - '151'
-      Cache-Control:
-      - no-cache
-      Content-Type:
-      - application/json
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"Connections": 144, "OutRate": 2900000000, "SysInfo": {"ap":16,"scl":0.27,"tpms":33614807040,"fpms":27301101568,"tsss":16000217088,"fsss":15297167360}}'
-    http_version: 
-  recorded_at: Mon, 14 Nov 2016 13:20:00 GMT
-- request:
-    method: get
-    uri: http://static-uk2.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-      Host:
-      - static-uk2.ororo.tv:8082
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Mon, 14 Nov 2016 13:19:59 GMT
-      Server:
-      - Nimble/3.0.7-10
-      Content-Length:
-      - '151'
-      Cache-Control:
-      - no-cache
-      Content-Type:
-      - application/json
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"Connections": 135, "OutRate": 2900000000, "SysInfo": {"ap":16,"scl":0.46,"tpms":33614807040,"fpms":28077858816,"tsss":16000217088,"fsss":15387619328}}'
-    http_version: 
-  recorded_at: Mon, 14 Nov 2016 13:20:00 GMT
-- request:
-    method: get
-    uri: http://static-fr.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-      Host:
-      - static-fr.ororo.tv:8082
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Mon, 14 Nov 2016 13:20:00 GMT
-      Server:
-      - Nimble/3.0.7-10
-      Content-Length:
-      - '130'
-      Cache-Control:
-      - no-cache
-      Content-Type:
-      - application/json
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"Connections": 92, "OutRate": 2900000000, "SysInfo": {"ap":8,"scl":0.044,"tpms":67529732096,"fpms":62438166528,"tsss":0,"fsss":0}}'
-    http_version: 
-  recorded_at: Mon, 14 Nov 2016 13:20:00 GMT
-- request:
-    method: get
     uri: http://static-ca2.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
     body:
       encoding: US-ASCII
@@ -206,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Nov 2016 13:20:00 GMT
+      - Tue, 15 Nov 2016 15:32:55 GMT
       Server:
       - Nimble/3.0.7-10
       Content-Length:
@@ -219,9 +34,9 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: '{"Connections": 106, "OutRate": 2900000000, "SysInfo": {"ap":12,"scl":0.041,"tpms":50614956032,"fpms":45252567040,"tsss":535818240,"fsss":379969536}}'
+      string: '{"Connections": 148, "OutRate": 3000000000, "SysInfo": {"ap":12,"scl":0.035,"tpms":50614956032,"fpms":46256574464,"tsss":535818240,"fsss":335699968}}'
     http_version: 
-  recorded_at: Mon, 14 Nov 2016 13:20:00 GMT
+  recorded_at: Tue, 15 Nov 2016 15:32:55 GMT
 - request:
     method: get
     uri: http://static-ru.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
@@ -243,7 +58,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Nov 2016 13:20:12 GMT
+      - Tue, 15 Nov 2016 15:33:10 GMT
       Server:
       - Nimble/3.0.7-10
       Content-Length:
@@ -256,46 +71,9 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: '{"Connections": 673, "OutRate": 2900000000, "SysInfo": {"ap":12,"scl":0.12,"tpms":135094128640,"fpms":121655443456,"tsss":28998365184,"fsss":28189986816}}'
+      string: '{"Connections": 665, "OutRate": 3000000000, "SysInfo": {"ap":12,"scl":0.11,"tpms":135094128640,"fpms":121600028672,"tsss":28998365184,"fsss":28063842304}}'
     http_version: 
-  recorded_at: Mon, 14 Nov 2016 13:20:00 GMT
-- request:
-    method: get
-    uri: http://static-rbx2.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-      Host:
-      - static-rbx2.ororo.tv:8082
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Mon, 14 Nov 2016 13:20:00 GMT
-      Server:
-      - Nimble/3.0.7-10
-      Content-Length:
-      - '132'
-      Cache-Control:
-      - no-cache
-      Content-Type:
-      - application/json
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"Connections": 408, "OutRate": 2900000000, "SysInfo": {"ap":12,"scl":0.068,"tpms":50614112256,"fpms":42779979776,"tsss":0,"fsss":0}}'
-    http_version: 
-  recorded_at: Mon, 14 Nov 2016 13:20:00 GMT
+  recorded_at: Tue, 15 Nov 2016 15:32:55 GMT
 - request:
     method: get
     uri: http://static-ua2.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
@@ -317,7 +95,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Nov 2016 13:20:00 GMT
+      - Tue, 15 Nov 2016 15:32:56 GMT
       Server:
       - Nimble/3.0.7-10
       Content-Length:
@@ -330,194 +108,9 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: '{"Connections": 119, "OutRate": 2900000000, "SysInfo": {"ap":4,"scl":0.18,"tpms":16763469824,"fpms":13369360384,"tsss":15999164416,"fsss":15972823040}}'
+      string: '{"Connections": 120, "OutRate": 3000000000, "SysInfo": {"ap":4,"scl":0.12,"tpms":16763469824,"fpms":13644357632,"tsss":15999164416,"fsss":15968927744}}'
     http_version: 
-  recorded_at: Mon, 14 Nov 2016 13:20:00 GMT
-- request:
-    method: get
-    uri: http://static-uk.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-      Host:
-      - static-uk.ororo.tv:8082
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Mon, 14 Nov 2016 13:27:29 GMT
-      Server:
-      - Nimble/3.0.7-10
-      Content-Length:
-      - '151'
-      Cache-Control:
-      - no-cache
-      Content-Type:
-      - application/json
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"Connections": 133, "OutRate": 240351672, "SysInfo": {"ap":16,"scl":0.64,"tpms":33614807040,"fpms":27017125888,"tsss":16000217088,"fsss":15294414848}}'
-    http_version: 
-  recorded_at: Mon, 14 Nov 2016 13:27:29 GMT
-- request:
-    method: get
-    uri: http://static-uk2.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-      Host:
-      - static-uk2.ororo.tv:8082
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Mon, 14 Nov 2016 13:27:29 GMT
-      Server:
-      - Nimble/3.0.7-10
-      Content-Length:
-      - '151'
-      Cache-Control:
-      - no-cache
-      Content-Type:
-      - application/json
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"Connections": 130, "OutRate": 238712096, "SysInfo": {"ap":16,"scl":0.61,"tpms":33614807040,"fpms":27909140480,"tsss":16000217088,"fsss":15384424448}}'
-    http_version: 
-  recorded_at: Mon, 14 Nov 2016 13:27:29 GMT
-- request:
-    method: get
-    uri: http://static-rbx2.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-      Host:
-      - static-rbx2.ororo.tv:8082
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Mon, 14 Nov 2016 13:27:29 GMT
-      Server:
-      - Nimble/3.0.7-10
-      Content-Length:
-      - '132'
-      Cache-Control:
-      - no-cache
-      Content-Type:
-      - application/json
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"Connections": 409, "OutRate": 748702144, "SysInfo": {"ap":12,"scl":0.074,"tpms":50614112256,"fpms":42838319104,"tsss":0,"fsss":0}}'
-    http_version: 
-  recorded_at: Mon, 14 Nov 2016 13:27:29 GMT
-- request:
-    method: get
-    uri: http://static-rbx.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-      Host:
-      - static-rbx.ororo.tv:8082
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Mon, 14 Nov 2016 13:27:29 GMT
-      Server:
-      - Nimble/3.0.7-10
-      Content-Length:
-      - '132'
-      Cache-Control:
-      - no-cache
-      Content-Type:
-      - application/json
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"Connections": 470, "OutRate": 855572056, "SysInfo": {"ap":12,"scl":0.066,"tpms":50614116352,"fpms":41661509632,"tsss":0,"fsss":0}}'
-    http_version: 
-  recorded_at: Mon, 14 Nov 2016 13:27:29 GMT
-- request:
-    method: get
-    uri: http://static-fr.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-      Host:
-      - static-fr.ororo.tv:8082
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Mon, 14 Nov 2016 13:27:29 GMT
-      Server:
-      - Nimble/3.0.7-10
-      Content-Length:
-      - '129'
-      Cache-Control:
-      - no-cache
-      Content-Type:
-      - application/json
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"Connections": 105, "OutRate": 192733584, "SysInfo": {"ap":8,"scl":0.1,"tpms":67529732096,"fpms":62444716032,"tsss":0,"fsss":0}}'
-    http_version: 
-  recorded_at: Mon, 14 Nov 2016 13:27:29 GMT
+  recorded_at: Tue, 15 Nov 2016 15:32:56 GMT
 - request:
     method: get
     uri: http://static-de.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
@@ -539,7 +132,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Nov 2016 13:27:29 GMT
+      - Tue, 15 Nov 2016 15:32:56 GMT
       Server:
       - Nimble/3.0.7-10
       Content-Length:
@@ -552,7 +145,192 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: '{"Connections": 43, "OutRate": 87331976, "SysInfo": {"ap":4,"scl":0.059,"tpms":16828022784,"fpms":14713761792,"tsss":4094685184,"fsss":3909423104}}'
+      string: '{"Connections": 64, "OutRate": 3000000000, "SysInfo": {"ap":4,"scl":0.21,"tpms":16828022784,"fpms":14140731392,"tsss":4094685184,"fsss":3559231488}}'
     http_version: 
-  recorded_at: Mon, 14 Nov 2016 13:27:29 GMT
+  recorded_at: Tue, 15 Nov 2016 15:32:56 GMT
+- request:
+    method: get
+    uri: http://static-uk.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - static-uk.ororo.tv:8082
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Nov 2016 15:32:57 GMT
+      Server:
+      - Nimble/3.0.7-10
+      Content-Length:
+      - '151'
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"Connections": 155, "OutRate": 3000000000, "SysInfo": {"ap":16,"scl":0.64,"tpms":33614807040,"fpms":26620973056,"tsss":16000217088,"fsss":15361130496}}'
+    http_version: 
+  recorded_at: Tue, 15 Nov 2016 15:32:57 GMT
+- request:
+    method: get
+    uri: http://static-uk2.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - static-uk2.ororo.tv:8082
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Nov 2016 15:32:57 GMT
+      Server:
+      - Nimble/3.0.7-10
+      Content-Length:
+      - '151'
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"Connections": 114, "OutRate": 3000000000, "SysInfo": {"ap":16,"scl":0.61,"tpms":33614807040,"fpms":26413846528,"tsss":16000217088,"fsss":15135895552}}'
+    http_version: 
+  recorded_at: Tue, 15 Nov 2016 15:32:57 GMT
+- request:
+    method: get
+    uri: http://static-rbx.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - static-rbx.ororo.tv:8082
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Nov 2016 15:32:58 GMT
+      Server:
+      - Nimble/3.0.7-10
+      Content-Length:
+      - '132'
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"Connections": 493, "OutRate": 3000000000, "SysInfo": {"ap":12,"scl":0.084,"tpms":50614116352,"fpms":41815994368,"tsss":0,"fsss":0}}'
+    http_version: 
+  recorded_at: Tue, 15 Nov 2016 15:32:58 GMT
+- request:
+    method: get
+    uri: http://static-rbx2.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - static-rbx2.ororo.tv:8082
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Nov 2016 15:32:58 GMT
+      Server:
+      - Nimble/3.0.7-10
+      Content-Length:
+      - '130'
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"Connections": 508, "OutRate": 3000000000, "SysInfo": {"ap":12,"scl":0.1,"tpms":50614112256,"fpms":40847421440,"tsss":0,"fsss":0}}'
+    http_version: 
+  recorded_at: Tue, 15 Nov 2016 15:32:58 GMT
+- request:
+    method: get
+    uri: http://static-fr.ororo.tv:8082/manage/server_status?hash=MK4eLWVhz/3bTQbrD5bCdg==&salt=501120
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - static-fr.ororo.tv:8082
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Nov 2016 15:32:59 GMT
+      Server:
+      - Nimble/3.0.7-10
+      Content-Length:
+      - '131'
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"Connections": 103, "OutRate": 3000000000, "SysInfo": {"ap":8,"scl":0.028,"tpms":67529732096,"fpms":62489448448,"tsss":0,"fsss":0}}'
+    http_version: 
+  recorded_at: Tue, 15 Nov 2016 15:32:59 GMT
 recorded_with: VCR 3.0.0
