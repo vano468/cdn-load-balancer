@@ -24,14 +24,16 @@ class Balancer
     reject_by_server(current_server) if current_server
     reject_by_overload
     select_by_ip_country
-    select_by_priority_group
-    @servers.empty? ? nil : randomized_by_weight
+    unless @servers.empty?
+      select_by_priority_group
+      randomized_by_weight
+    end
   end
 
   private
 
   def reject_by_server(server)
-    @servers.reject! { |url, _| server == url }
+    @servers.delete(server)
   end
 
   def reject_by_overload
@@ -56,19 +58,13 @@ class Balancer
   end
 
   def select_by_priority_group
-    priority = highest_priority_group
-    @servers.select! { |_, data| data[:ranking][:priority] == priority }
-  end
-
-  def highest_priority_group
-    @servers.inject(0) do |max, (_, data)|
-      data[:ranking][:priority] > max ? data[:ranking][:priority] : max
-    end
+    @servers = @servers.group_by do |_, data|
+      data[:ranking][:priority]
+    end.max_by(&:first).last.to_h
   end
 
   def randomized_by_weight
-    WeightedRandomizer.new(@servers.each_with_object({}) do |(url, data), memo|
-      memo[url] = data[:ranking][:weight]
-    end).sample
+    randomizer_data = @servers.transform_values { |data| data[:ranking][:weight] }
+    WeightedRandomizer.new(randomizer_data).sample
   end
 end
